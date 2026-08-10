@@ -3,6 +3,16 @@
 Marketing website for Auroha Tejve Private Limited, a software studio building
 Shopify apps, Shopify stores, B2B SaaS products, and AI solutions.
 
+## Preview
+
+| Hero | Products |
+| --- | --- |
+| ![Hero section](docs/screenshots/desktop-hero.png) | ![Products section](docs/screenshots/desktop-products.png) |
+
+| Full desktop page | Full mobile page |
+| --- | --- |
+| ![Full desktop page](docs/screenshots/desktop-full.png) | <img src="docs/screenshots/mobile-full.png" alt="Full mobile page" width="280" /> |
+
 ## Stack
 
 - [Next.js](https://nextjs.org) (App Router) + TypeScript
