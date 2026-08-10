@@ -37,7 +37,7 @@ export default function Navbar() {
       <nav className="container-px mx-auto flex max-w-7xl items-center justify-between py-5">
         <Link href="/" className="flex items-center gap-2.5 font-display text-base font-semibold tracking-tight text-ink">
           <LogoMark />
-          <span className="hidden sm:inline">Auroha Tejve</span>
+          <span>Auroha Tejve</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

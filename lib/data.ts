@@ -84,7 +84,7 @@ export const products: Product[] = [
       "Unified, multi-channel order dashboard",
     ],
     frame: "browser",
-    href: "#",
+    href: "https://ordzo.vercel.app/",
   },
   {
     name: "OrderFlow",
@@ -99,7 +99,7 @@ export const products: Product[] = [
       "Shared team inbox for order management",
     ],
     frame: "phone",
-    href: "#",
+    href: "https://orderflow-sandbox.vercel.app/",
   },
 ];
 

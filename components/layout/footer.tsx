@@ -37,9 +37,14 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               {products.map((product) => (
                 <li key={product.name}>
-                  <Link href={product.href} className="text-sm text-ink-muted transition-colors hover:text-ink">
+                  <a
+                    href={product.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-ink-muted transition-colors hover:text-ink"
+                  >
                     {product.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
