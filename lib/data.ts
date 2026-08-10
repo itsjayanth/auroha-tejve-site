@@ -175,8 +175,6 @@ export const processSteps: ProcessStep[] = [
   },
 ];
 
-export const trustLogos = ["Northwind", "Halcyon", "Verdant", "Kessler & Co", "Brightloop", "Marrow"];
-
 export type Testimonial = {
   quote: string;
   name: string;
