@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Auroha Tejve — full-bleed app icon (for OS-level masking)</title>
+  <defs>
+    <linearGradient id="atAppBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6E56F8" />
+      <stop offset="1" stop-color="#4429C9" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" fill="url(#atAppBg)" />
+  <path d="M10.5 46L32 24L53.5 46" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M32 8.5L38 14.5L32 20.5L26 14.5Z" fill="#FFFFFF" />
+</svg>

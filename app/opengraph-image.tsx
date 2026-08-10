@@ -28,22 +28,24 @@ export default function OpengraphImage() {
             marginBottom: 40,
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              width: 56,
-              height: 56,
-              borderRadius: 14,
-              background: "linear-gradient(135deg, #6E56F8, #4429C9)",
-              color: "white",
-              fontSize: 24,
-              fontWeight: 700,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            AT
-          </div>
+          <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+            <defs>
+              <linearGradient id="ogMarkBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stopColor="#6E56F8" />
+                <stop offset="1" stopColor="#4429C9" />
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="16" fill="url(#ogMarkBg)" />
+            <path
+              d="M10.5 46L32 24L53.5 46"
+              stroke="#FFFFFF"
+              strokeWidth={7.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+            <path d="M32 8.5L38 14.5L32 20.5L26 14.5Z" fill="#FFFFFF" />
+          </svg>
           <div style={{ display: "flex", fontSize: 30, color: "#a2a2b3", fontWeight: 500 }}>
             Auroha Tejve
           </div>

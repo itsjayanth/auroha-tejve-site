@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Auroha Tejve — app icon / badge (white)</title>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="1.5" />
+  <path d="M10.5 46L32 24L53.5 46" stroke="#000000" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <path d="M32 8.5L38 14.5L32 20.5L26 14.5Z" fill="#000000" />
+</svg>

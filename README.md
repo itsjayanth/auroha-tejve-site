@@ -34,8 +34,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 - `app/` — routes, root layout, SEO metadata, the contact API route (`app/api/contact`)
 - `components/sections/` — one component per homepage section (Hero, Services, Products, Approach, Process, Social Proof, CTA, Contact)
 - `components/layout/` — Navbar and Footer
-- `components/ui/` — reusable primitives (Button, Badge, SectionHeading, Reveal, GradientMesh, DeviceFrame, Noise)
+- `components/ui/` — reusable primitives (Button, Badge, SectionHeading, Reveal, GradientMesh, DeviceFrame, Noise, LogoMark)
 - `lib/data.ts` — all site copy/content (services, products, process steps, testimonials, nav links)
+- `brand/` — logo source files (SVG), PNG/favicon/app-icon exports, and social/email/business-card assets, with a full usage guide at `brand/README.md`
+- `scripts/brand/` — the generator scripts that produce everything in `brand/` and the site's favicons, in case the logo ever needs to change
 
 ## Editing content
 

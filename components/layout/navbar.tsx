@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/data";
 import Button from "@/components/ui/button";
+import LogoMark from "@/components/ui/logo-mark";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -35,9 +36,7 @@ export default function Navbar() {
     >
       <nav className="container-px mx-auto flex max-w-7xl items-center justify-between py-5">
         <Link href="/" className="flex items-center gap-2.5 font-display text-base font-semibold tracking-tight text-ink">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-deep text-sm font-bold text-white">
-            AT
-          </span>
+          <LogoMark />
           <span className="hidden sm:inline">Auroha Tejve</span>
         </Link>
 

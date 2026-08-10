@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navLinks, products, siteConfig, socialLinks } from "@/lib/data";
+import LogoMark from "@/components/ui/logo-mark";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -10,9 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
           <div className="col-span-2 sm:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 font-display text-base font-semibold text-ink">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-deep text-sm font-bold text-white">
-                AT
-              </span>
+              <LogoMark />
               Auroha Tejve
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
