@@ -8,7 +8,7 @@ export default function SocialProof() {
   return (
     <section className="relative py-28 sm:py-36">
       <div className="container-px mx-auto max-w-7xl">
-        <RevealGroup className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <RevealGroup className="mx-auto grid max-w-xl grid-cols-1 gap-5">
           {testimonials.map((testimonial) => (
             <RevealItem key={testimonial.name + testimonial.quote}>
               <div className="card-surface flex h-full flex-col rounded-2xl p-7">
@@ -22,9 +22,6 @@ export default function SocialProof() {
             </RevealItem>
           ))}
         </RevealGroup>
-        <p className="mt-6 text-center text-xs text-ink-faint">
-          Placeholder testimonials — replace with real client quotes.
-        </p>
       </div>
     </section>
   );

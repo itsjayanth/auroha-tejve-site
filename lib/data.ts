@@ -184,20 +184,8 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Auroha Tejve rebuilt our checkout flow in weeks and conversion jumped almost overnight. They think like founders, not vendors.",
-    name: "Placeholder Name",
-    role: "Placeholder Title, Placeholder Company",
-  },
-  {
-    quote:
-      "The team shipped our SaaS MVP faster than any agency we'd worked with, and the codebase was clean enough that our in-house team took over without friction.",
-    name: "Placeholder Name",
-    role: "Placeholder Title, Placeholder Company",
-  },
-  {
-    quote:
-      "What stood out was how they treated AI — not as a gimmick, but as core product infrastructure from day one.",
-    name: "Placeholder Name",
-    role: "Placeholder Title, Placeholder Company",
+      "OrderFlow automated order management for us end-to-end — work that used to eat up our staff's time now just runs itself. It's made a real difference in how we operate.",
+    name: "Varkey's Cafe",
+    role: "Bengaluru",
   },
 ];
