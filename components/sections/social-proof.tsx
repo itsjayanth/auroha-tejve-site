@@ -2,13 +2,21 @@
 
 import { Quote } from "lucide-react";
 import { testimonials } from "@/lib/data";
+import SectionHeading from "@/components/ui/section-heading";
 import { RevealGroup, RevealItem } from "@/components/ui/reveal";
 
 export default function SocialProof() {
   return (
     <section className="relative py-28 sm:py-36">
       <div className="container-px mx-auto max-w-7xl">
-        <RevealGroup className="mx-auto grid max-w-xl grid-cols-1 gap-5">
+        <SectionHeading
+          eyebrow="Testimonials"
+          title="What clients say"
+          align="center"
+          className="mx-auto max-w-2xl"
+        />
+
+        <RevealGroup className="mx-auto mt-16 grid max-w-xl grid-cols-1 gap-5">
           {testimonials.map((testimonial) => (
             <RevealItem key={testimonial.name + testimonial.quote}>
               <div className="card-surface flex h-full flex-col rounded-2xl p-7">
