@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "We build the software behind modern commerce.",
   description:
     "A software studio building Shopify apps, Shopify stores, B2B SaaS products, and AI solutions.",
-  email: "hello@aurohatejve.com",
+  email: "auroha.help@gmail.com",
   location: "Remote-first · Building from India",
 };
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Button from "@/components/ui/button";
 import GradientMesh from "@/components/ui/gradient-mesh";
+import { siteConfig } from "@/lib/data";
 
 export default function CTA() {
   return (
@@ -30,7 +31,7 @@ export default function CTA() {
                 Start a Project
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
-              <Button href="mailto:hello@aurohatejve.com" variant="secondary">
+              <Button href={`mailto:${siteConfig.email}`} variant="secondary">
                 Email us directly
               </Button>
             </div>
