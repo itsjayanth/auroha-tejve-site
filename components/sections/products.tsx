@@ -142,6 +142,7 @@ export default function Products() {
                       href={product.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Visit ${product.name}`}
                       className="group mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-ink transition-colors hover:text-accent-soft"
                     >
                       Visit site
