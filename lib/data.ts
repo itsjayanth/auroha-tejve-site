@@ -1,11 +1,14 @@
 export const siteConfig = {
   name: "Auroha Tejve Private Limited",
   shortName: "Auroha Tejve",
+  url: "https://aurohatejve.com",
   tagline: "We build the software behind modern commerce.",
   description:
     "A software studio building Shopify apps, Shopify stores, B2B SaaS products, and AI solutions.",
   email: "auroha.help@gmail.com",
   location: "Remote-first · Building from India",
+  // ISO 8601 date (e.g. "2024-01-15") — set this once known, used in Organization JSON-LD.
+  foundingDate: "",
 };
 
 export const navLinks = [
@@ -20,6 +23,7 @@ export const socialLinks = [
   { label: "X / Twitter", href: "https://twitter.com/aurohatejve" },
   { label: "LinkedIn", href: "https://linkedin.com/company/aurohatejve" },
   { label: "GitHub", href: "https://github.com/aurohatejve" },
+  // Add a Crunchbase profile URL here once one exists — included in Organization JSON-LD "sameAs".
 ];
 
 export type Service = {

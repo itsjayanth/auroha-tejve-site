@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Inter } from "next/font/google";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import Noise from "@/components/ui/noise";
+import { siteConfig } from "@/lib/data";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -17,7 +18,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://aurohatejve.com";
+const siteUrl = siteConfig.url;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s · Auroha Tejve",
   },
   description:
-    "Auroha Tejve Private Limited is a software studio building Shopify apps, high-converting Shopify stores, B2B SaaS products, and applied AI solutions for modern commerce.",
+    "Auroha Tejve Private Limited is a software studio building Shopify apps, Shopify stores, B2B SaaS products, and applied AI solutions for modern commerce.",
   keywords: [
     "Shopify app development",
     "Shopify store development",
@@ -35,6 +36,9 @@ export const metadata: Metadata = {
     "Auroha Tejve",
   ],
   authors: [{ name: "Auroha Tejve Private Limited" }],
+  alternates: {
+    canonical: siteUrl,
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -57,6 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@aurohatejve",
     title: "Auroha Tejve — Software behind modern commerce",
     description:
       "We build Shopify apps, Shopify stores, B2B SaaS products, and AI solutions for modern commerce.",

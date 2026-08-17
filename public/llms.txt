@@ -1,0 +1,52 @@
+# Auroha Tejve Private Limited
+
+> Auroha Tejve Private Limited is a software studio that builds Shopify apps, high-converting Shopify stores, B2B SaaS products, and applied AI solutions for modern commerce businesses.
+
+Auroha Tejve is a small, senior engineering team — no bench of juniors, no
+account-manager layer between clients and the people building. Engagements
+run end to end: discovery, product architecture and design, weekly-iteration
+builds, launch, and post-launch support.
+
+## Services
+
+- **Shopify App Development** — public and private Shopify apps built for
+  the App Store, including App Store submissions, billing & subscriptions,
+  and embedded admin UI.
+- **Shopify Store Development** — custom, high-converting storefronts on
+  Shopify and Shopify Plus, including custom theme builds, headless
+  storefronts, and CRO & performance work.
+- **B2B SaaS Development** — end-to-end product builds for B2B software
+  companies: product architecture, multi-tenant infrastructure, and design
+  systems.
+- **AI Solutions** — applied AI and automation for commerce and business
+  workflows, from LLM-powered features to data & retrieval pipelines.
+
+## Products
+
+- **Ordzo** (in development) — AI-based order management for ecommerce.
+  Automates order triage, prioritization, fulfillment routing, and
+  real-time exception detection across channels. https://ordzo.vercel.app/
+- **OrderFlow** (now building) — WhatsApp-based order taking and
+  management. Turns WhatsApp into a full ordering platform with catalog
+  browsing, automated confirmations, and a shared team inbox.
+  https://orderflow-sandbox.vercel.app/
+
+## Case studies
+
+- Varkey's Cafe (Bengaluru) — adopted OrderFlow to automate end-to-end
+  order management, removing manual order-handling work from staff time.
+
+## Key pages
+
+- Homepage: https://aurohatejve.com/ — overview, services, products,
+  approach, process, and contact.
+- Services: https://aurohatejve.com/#services
+- Products: https://aurohatejve.com/#products
+- Approach: https://aurohatejve.com/#approach
+- Process: https://aurohatejve.com/#process
+- Contact: https://aurohatejve.com/#contact
+
+## Contact
+
+Email: auroha.help@gmail.com
+Location: Remote-first, building from India
