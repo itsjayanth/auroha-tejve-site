@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Auroha Tejve Private Limited",
   shortName: "Auroha Tejve",
-  url: "https://aurohatejve.com",
+  url: "https://3at.vercel.app",
   tagline: "We build the software behind modern commerce.",
   description:
     "A software studio building Shopify apps, Shopify stores, B2B SaaS products, and AI solutions.",
