@@ -37,4 +37,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://aurohatejve.com/sitemap.xml
+Sitemap: https://3at.vercel.app/sitemap.xml

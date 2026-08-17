@@ -5,7 +5,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
-    alternateName: siteConfig.shortName,
+    alternateName: [siteConfig.shortName, "Auroha"],
     description:
       "Auroha Tejve Private Limited is a software development company building Shopify apps, Shopify stores, B2B SaaS products, and applied AI solutions for ecommerce.",
     url: siteConfig.url,
@@ -39,9 +39,23 @@ export function productsJsonLd() {
   }));
 }
 
+export function websiteJsonLd() {
+  return {
+    "@type": "WebSite",
+    name: "Auroha",
+    url: siteConfig.url,
+    publisher: { "@id": `${siteConfig.url}/#organization` },
+  };
+}
+
 export function homepageJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@graph": [organizationJsonLd(), ...servicesJsonLd(), ...productsJsonLd()],
+    "@graph": [
+      organizationJsonLd(),
+      websiteJsonLd(),
+      ...servicesJsonLd(),
+      ...productsJsonLd(),
+    ],
   };
 }

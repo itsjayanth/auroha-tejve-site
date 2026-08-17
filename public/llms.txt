@@ -38,13 +38,13 @@ builds, launch, and post-launch support.
 
 ## Key pages
 
-- Homepage: https://aurohatejve.com/ — overview, services, products,
+- Homepage: https://3at.vercel.app/ — overview, services, products,
   approach, process, and contact.
-- Services: https://aurohatejve.com/#services
-- Products: https://aurohatejve.com/#products
-- Approach: https://aurohatejve.com/#approach
-- Process: https://aurohatejve.com/#process
-- Contact: https://aurohatejve.com/#contact
+- Services: https://3at.vercel.app/#services
+- Products: https://3at.vercel.app/#products
+- Approach: https://3at.vercel.app/#approach
+- Process: https://3at.vercel.app/#process
+- Contact: https://3at.vercel.app/#contact
 
 ## Contact
 

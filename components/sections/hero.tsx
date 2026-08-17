@@ -25,7 +25,7 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-gradient sm:text-6xl lg:text-7xl">
-            We build the software behind modern commerce.
+            Auroha Tejve builds the software behind modern commerce.
           </h1>
 
           <p className="mt-7 max-w-2xl text-balance text-lg leading-relaxed text-ink-muted sm:text-xl">
