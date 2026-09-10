@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 
-const COLORS = ["#6e56f8", "#a996ff", "#4429c9", "#f4f4f7"];
+const DEFAULT_COLORS = ["#6e56f8", "#a996ff", "#4429c9", "#f4f4f7"];
 
 type Particle = {
   id: number;
@@ -15,20 +15,26 @@ type Particle = {
   delay: number;
 };
 
-function makeParticles(count: number): Particle[] {
+function makeParticles(count: number, colors: string[]): Particle[] {
   return Array.from({ length: count }, (_, id) => ({
     id,
     angle: Math.random() * Math.PI * 2,
     distance: 110 + Math.random() * 170,
     size: 7 + Math.random() * 7,
-    color: COLORS[id % COLORS.length],
+    color: colors[id % colors.length],
     rotate: Math.random() * 540 - 270,
     delay: Math.random() * 0.15,
   }));
 }
 
-export default function ConfettiBurst({ count = 56 }: { count?: number }) {
-  const particles = useMemo(() => makeParticles(count), [count]);
+export default function ConfettiBurst({
+  count = 56,
+  colors = DEFAULT_COLORS,
+}: {
+  count?: number;
+  colors?: string[];
+}) {
+  const particles = useMemo(() => makeParticles(count, colors), [count, colors]);
 
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
