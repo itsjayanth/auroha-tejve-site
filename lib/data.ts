@@ -19,12 +19,23 @@ export const launch = {
   date: "2026-09-16",
 };
 
+// Toggleable behavior for the dedicated /launch page.
+export const launchPageConfig = {
+  // false (default): every visit resets to idle — the page stays replayable as an easter egg.
+  // true: each act's "go live" click is remembered in localStorage, and future visits
+  // render both acts straight in their live end-state.
+  lockAfterFirstClick: false,
+  // Plays a short synthesized chime on each "go live" click (muted by default, user-toggleable).
+  soundEnabled: true,
+};
+
 export const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Products", href: "#products" },
   { label: "Approach", href: "#approach" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
+  { label: "Launch", href: "/launch" },
 ];
 
 export const socialLinks = [
