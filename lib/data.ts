@@ -11,6 +11,14 @@ export const siteConfig = {
   foundingDate: "",
 };
 
+export const launch = {
+  companyName: siteConfig.name,
+  appName: "OrderFlow",
+  appUrl: "https://orderflow-sandbox.vercel.app/",
+  // ISO 8601 date — the section auto-settles into its permanent state on/after this date.
+  date: "2026-09-16",
+};
+
 export const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Products", href: "#products" },

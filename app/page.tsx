@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/hero";
+import LaunchAnnouncement from "@/components/sections/launch-announcement";
 import Services from "@/components/sections/services";
 import Products from "@/components/sections/products";
 import Approach from "@/components/sections/approach";
@@ -16,6 +17,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd()) }}
       />
       <Hero />
+      <LaunchAnnouncement />
       <Services />
       <Products />
       <Approach />
