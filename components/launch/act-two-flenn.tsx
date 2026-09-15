@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { MessageCircle, Rocket, ArrowUpRight } from "lucide-react";
+import { MessageCircle, ArrowUpRight } from "lucide-react";
 import Button from "@/components/ui/button";
 import Badge from "@/components/ui/badge";
 import GradientMesh from "@/components/ui/gradient-mesh";
 import ConfettiBurst from "@/components/ui/confetti-burst";
+import LaunchButton from "@/components/ui/launch-button";
 import { launch, products } from "@/lib/data";
 
 type Phase = "idle" | "celebrating" | "live";
@@ -49,10 +50,12 @@ export default function ActTwoFlenn({
     }
   }, [initialLive]);
 
-  const launchApp = () => {
+  const handleIgnition = () => {
     announce(`${launch.appName} is now live.`);
     playSound();
+  };
 
+  const handleLaunched = () => {
     if (prefersReducedMotion) {
       setPhase("live");
       onLive();
@@ -110,10 +113,13 @@ export default function ActTwoFlenn({
                 {flenn?.tagline}. Not live yet — but not for long.
               </p>
               <div className="mt-10">
-                <Button onClick={launchApp}>
-                  <Rocket className="h-4 w-4" />
-                  Launch {launch.appName}
-                </Button>
+                <LaunchButton
+                  label={`Launch ${launch.appName}`}
+                  completedLabel="Launched ✓"
+                  colors={GREEN_PALETTE}
+                  onLaunch={handleIgnition}
+                  onComplete={handleLaunched}
+                />
               </div>
             </motion.div>
           ) : (
