@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## Editing content
 
-Nearly all copy — services, the Ordzo/OrderFlow product cards, process steps,
+Nearly all copy — services, the Ordzo/Flenn product cards, process steps,
 pillars, and testimonials — lives in `lib/data.ts`. Update it there rather than
 in the section components.
 

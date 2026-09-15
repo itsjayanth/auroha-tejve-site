@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Auroha Tejve Private Limited",
   shortName: "Auroha Tejve",
   url: "https://3at.vercel.app",
-  tagline: "We build the software behind modern commerce.",
+  tagline: "A bunch of keys to success.",
   description:
     "A software studio building Shopify apps, Shopify stores, B2B SaaS products, and AI solutions.",
   email: "auroha.help@gmail.com",
@@ -13,8 +13,8 @@ export const siteConfig = {
 
 export const launch = {
   companyName: siteConfig.name,
-  appName: "OrderFlow",
-  appUrl: "https://orderflow-sandbox.vercel.app/",
+  appName: "Flenn",
+  appUrl: "https://flenn.in/",
   // ISO 8601 date — the section auto-settles into its permanent state on/after this date.
   date: "2026-09-16",
 };
@@ -110,11 +110,11 @@ export const products: Product[] = [
     href: "https://ordzo.vercel.app/",
   },
   {
-    name: "OrderFlow",
+    name: "Flenn",
     status: "Now Building",
     tagline: "WhatsApp-based order taking & management",
     description:
-      "OrderFlow turns WhatsApp into a full ordering platform — letting businesses take, confirm, and manage orders without asking customers to leave the chat.",
+      "Flenn turns WhatsApp into a full ordering platform — letting businesses take, confirm, and manage orders without asking customers to leave the chat.",
     features: [
       "Catalog & ordering inside WhatsApp",
       "Automated order confirmations",
@@ -122,7 +122,7 @@ export const products: Product[] = [
       "Shared team inbox for order management",
     ],
     frame: "phone",
-    href: "https://orderflow-sandbox.vercel.app/",
+    href: "https://flenn.in/",
   },
 ];
 
@@ -207,7 +207,7 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "OrderFlow automated order management for us end-to-end — work that used to eat up our staff's time now just runs itself. It's made a real difference in how we operate.",
+      "Flenn automated order management for us end-to-end — work that used to eat up our staff's time now just runs itself. It's made a real difference in how we operate.",
     name: "Varkey's Cafe",
     role: "Bengaluru",
   },
