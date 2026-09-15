@@ -26,14 +26,14 @@ builds, launch, and post-launch support.
 - **Ordzo** (in development) — AI-based order management for ecommerce.
   Automates order triage, prioritization, fulfillment routing, and
   real-time exception detection across channels. https://ordzo.vercel.app/
-- **OrderFlow** (now building) — WhatsApp-based order taking and
+- **Flenn** (now building) — WhatsApp-based order taking and
   management. Turns WhatsApp into a full ordering platform with catalog
   browsing, automated confirmations, and a shared team inbox.
-  https://orderflow-sandbox.vercel.app/
+  https://flenn.in/
 
 ## Case studies
 
-- Varkey's Cafe (Bengaluru) — adopted OrderFlow to automate end-to-end
+- Varkey's Cafe (Bengaluru) — adopted Flenn to automate end-to-end
   order management, removing manual order-handling work from staff time.
 
 ## Key pages

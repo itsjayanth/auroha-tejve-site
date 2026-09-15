@@ -13,9 +13,9 @@ type Phase = "idle" | "celebrating" | "live";
 
 const GREEN_PALETTE = ["#25d366", "#8cf5b0", "#075e54", "#f4f4f7"];
 
-const orderFlow = products.find((product) => product.name === launch.appName);
+const flenn = products.find((product) => product.name === launch.appName);
 
-function OrderFlowMark({ className }: { className?: string }) {
+function FlennMark({ className }: { className?: string }) {
   return (
     <div
       className={className}
@@ -28,7 +28,7 @@ function OrderFlowMark({ className }: { className?: string }) {
   );
 }
 
-export default function ActTwoOrderFlow({
+export default function ActTwoFlenn({
   initialLive,
   onLive,
   playSound,
@@ -102,12 +102,12 @@ export default function ActTwoOrderFlow({
                 <span className="h-1.5 w-1.5 rounded-full bg-[#25d366] animate-pulse" />
                 Act Two &middot; Product Launch
               </Badge>
-              <OrderFlowMark className="mt-8 flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
+              <FlennMark className="mt-8 flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
               <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-ink sm:text-6xl lg:text-7xl">
                 {launch.appName}
               </h1>
               <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ink-muted sm:text-xl">
-                {orderFlow?.tagline}. Not live yet — but not for long.
+                {flenn?.tagline}. Not live yet — but not for long.
               </p>
               <div className="mt-10">
                 <Button onClick={launchApp}>
@@ -124,12 +124,12 @@ export default function ActTwoOrderFlow({
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col items-center"
             >
-              <OrderFlowMark className="flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
+              <FlennMark className="flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
               <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-ink sm:text-6xl lg:text-7xl">
                 {launch.appName} is Now Live 🚀
               </h1>
               <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ink-muted sm:text-xl">
-                {orderFlow?.description}
+                {flenn?.description}
               </p>
               <div className="mt-10">
                 <Button href={launch.appUrl} external>

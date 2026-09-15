@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import ActOneAuroha from "./act-one-auroha";
-import ActTwoOrderFlow from "./act-two-orderflow";
+import ActTwoFlenn from "./act-two-flenn";
 import { launchPageConfig } from "@/lib/data";
 import { useLaunchSound } from "@/lib/use-launch-sound";
 
@@ -91,7 +91,7 @@ export default function LaunchExperience() {
 
       {act1Live ? (
         <div ref={act2Ref}>
-          <ActTwoOrderFlow
+          <ActTwoFlenn
             initialLive={act2Live}
             onLive={handleAct2Live}
             playSound={() => playChime("fanfare")}

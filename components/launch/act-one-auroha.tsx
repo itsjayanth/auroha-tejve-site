@@ -132,7 +132,7 @@ export default function ActOneAuroha({
                 transition={{ duration: 0.5, delay: prefersReducedMotion ? 0 : 1.2 }}
                 className="mt-14 inline-flex flex-col items-center gap-1 rounded-lg px-3 py-2 text-sm text-ink-faint transition-colors hover:text-ink-muted focus-visible:text-ink-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
               >
-                Continue to OrderFlow
+                Continue to Flenn
                 <ChevronDown className="h-4 w-4 animate-bounce" />
               </motion.button>
             </motion.div>

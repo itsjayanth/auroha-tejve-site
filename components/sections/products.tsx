@@ -53,7 +53,7 @@ function OrdzoMockup() {
   );
 }
 
-function OrderFlowMockup() {
+function FlennMockup() {
   const bubbles = [
     { from: "customer", text: "Hi! I'd like to order 2x Classic Combo" },
     { from: "biz", text: "Got it 🙌 Confirming: 2x Classic Combo — ₹580 total" },
@@ -162,7 +162,7 @@ export default function Products() {
                       </BrowserFrame>
                     ) : (
                       <PhoneFrame>
-                        <OrderFlowMockup />
+                        <FlennMockup />
                       </PhoneFrame>
                     )}
                   </motion.div>
