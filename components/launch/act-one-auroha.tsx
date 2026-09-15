@@ -8,7 +8,14 @@ import Badge from "@/components/ui/badge";
 import LogoMark from "@/components/ui/logo-mark";
 import GradientMesh from "@/components/ui/gradient-mesh";
 import ConfettiBurst from "@/components/ui/confetti-burst";
+import FireworksBurst from "@/components/ui/fireworks-burst";
+import Starfield from "@/components/ui/starfield";
+import GlowMark from "@/components/ui/glow-mark";
 import { launch } from "@/lib/data";
+
+const INDIGO_GLOW = "110,86,248";
+const CONFETTI_COLORS = ["#6e56f8", "#a996ff", "#4429c9", "#ffffff", "#ffd166"];
+const FIREWORK_COLORS = ["#ffffff", "#a996ff", "#6e56f8", "#ffd166"];
 
 type Phase = "idle" | "celebrating" | "live";
 
@@ -55,7 +62,7 @@ export default function ActOneAuroha({
     window.setTimeout(() => {
       setPhase("live");
       onLive();
-    }, 2600);
+    }, 3600);
   };
 
   const isLive = phase === "live";
@@ -66,18 +73,38 @@ export default function ActOneAuroha({
 
       <AnimatePresence>
         {phase === "celebrating" ? (
-          <motion.div
-            aria-hidden
-            className="absolute inset-0"
-            style={{ background: "radial-gradient(circle at 50% 45%, rgba(110,86,248,0.5), transparent 60%)" }}
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: [0, 0.9, 0], scale: [0.7, 1.5, 1.9] }}
-            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          />
+          <>
+            <motion.div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "radial-gradient(circle at 50% 45%, rgba(110,86,248,0.5), transparent 60%)",
+              }}
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: [0, 0.9, 0], scale: [0.7, 1.5, 1.9] }}
+              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+            />
+            <motion.div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "radial-gradient(circle at 50% 45%, rgba(169,150,255,0.4), transparent 65%)",
+              }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: [0, 0.75, 0], scale: [0.5, 2, 2.7] }}
+              transition={{ duration: 1.6, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            />
+          </>
         ) : null}
       </AnimatePresence>
 
-      {phase === "celebrating" ? <ConfettiBurst count={70} /> : null}
+      {phase === "celebrating" ? (
+        <>
+          <Starfield count={40} variant="burst" color="255,255,255" />
+          <FireworksBurst count={5} colors={FIREWORK_COLORS} />
+          <ConfettiBurst count={170} colors={CONFETTI_COLORS} />
+        </>
+      ) : null}
 
       <div className="relative mx-auto max-w-2xl">
         <AnimatePresence mode="wait">
@@ -94,7 +121,9 @@ export default function ActOneAuroha({
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-soft animate-pulse" />
                 Act One &middot; Inauguration
               </Badge>
-              <LogoMark className="mt-8 h-16 w-16 sm:h-20 sm:w-20" />
+              <GlowMark color={INDIGO_GLOW} size="7rem" className="mt-8">
+                <LogoMark className="h-16 w-16 sm:h-20 sm:w-20" />
+              </GlowMark>
               <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-gradient sm:text-6xl lg:text-7xl">
                 Inaugurating {launch.companyName}
               </h1>
@@ -116,10 +145,32 @@ export default function ActOneAuroha({
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col items-center"
             >
-              <LogoMark className="h-16 w-16 sm:h-20 sm:w-20" />
-              <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-gradient sm:text-6xl lg:text-7xl">
+              <Starfield count={18} variant="ambient" color="169,150,255" />
+              <GlowMark color={INDIGO_GLOW} size="8rem">
+                <LogoMark className="h-16 w-16 sm:h-20 sm:w-20" />
+              </GlowMark>
+              <motion.h1
+                className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-gradient sm:text-6xl lg:text-7xl"
+                style={
+                  prefersReducedMotion
+                    ? { filter: "drop-shadow(0 0 20px rgba(110,86,248,0.4))" }
+                    : undefined
+                }
+                animate={
+                  prefersReducedMotion
+                    ? undefined
+                    : {
+                        filter: [
+                          "drop-shadow(0 0 16px rgba(110,86,248,0.3))",
+                          "drop-shadow(0 0 38px rgba(110,86,248,0.6))",
+                          "drop-shadow(0 0 16px rgba(110,86,248,0.3))",
+                        ],
+                      }
+                }
+                transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+              >
                 {launch.companyName} is Live 🎉
-              </h1>
+              </motion.h1>
               <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ink-muted sm:text-xl">
                 Officially inaugurated &middot; {dateLabel}
               </p>

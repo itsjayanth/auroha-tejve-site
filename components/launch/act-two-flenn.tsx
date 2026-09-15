@@ -7,11 +7,16 @@ import Button from "@/components/ui/button";
 import Badge from "@/components/ui/badge";
 import GradientMesh from "@/components/ui/gradient-mesh";
 import ConfettiBurst from "@/components/ui/confetti-burst";
+import FireworksBurst from "@/components/ui/fireworks-burst";
+import Starfield from "@/components/ui/starfield";
+import GlowMark from "@/components/ui/glow-mark";
 import { launch, products } from "@/lib/data";
 
 type Phase = "idle" | "celebrating" | "live";
 
-const GREEN_PALETTE = ["#25d366", "#8cf5b0", "#075e54", "#f4f4f7"];
+const GREEN_GLOW = "37,211,102";
+const GREEN_PALETTE = ["#25d366", "#8cf5b0", "#075e54", "#ffffff", "#ffd166"];
+const FIREWORK_COLORS = ["#ffffff", "#8cf5b0", "#25d366", "#ffd166"];
 
 const flenn = products.find((product) => product.name === launch.appName);
 
@@ -63,7 +68,7 @@ export default function ActTwoFlenn({
     window.setTimeout(() => {
       setPhase("live");
       onLive();
-    }, 2600);
+    }, 3600);
   };
 
   const isLive = phase === "live";
@@ -74,18 +79,38 @@ export default function ActTwoFlenn({
 
       <AnimatePresence>
         {phase === "celebrating" ? (
-          <motion.div
-            aria-hidden
-            className="absolute inset-0"
-            style={{ background: "radial-gradient(circle at 50% 45%, rgba(37,211,102,0.5), transparent 60%)" }}
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: [0, 0.9, 0], scale: [0.7, 1.5, 1.9] }}
-            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          />
+          <>
+            <motion.div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "radial-gradient(circle at 50% 45%, rgba(37,211,102,0.5), transparent 60%)",
+              }}
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: [0, 0.9, 0], scale: [0.7, 1.5, 1.9] }}
+              transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+            />
+            <motion.div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "radial-gradient(circle at 50% 45%, rgba(140,245,176,0.4), transparent 65%)",
+              }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: [0, 0.75, 0], scale: [0.5, 2, 2.7] }}
+              transition={{ duration: 1.6, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            />
+          </>
         ) : null}
       </AnimatePresence>
 
-      {phase === "celebrating" ? <ConfettiBurst count={70} colors={GREEN_PALETTE} /> : null}
+      {phase === "celebrating" ? (
+        <>
+          <Starfield count={40} variant="burst" color="255,255,255" />
+          <FireworksBurst count={5} colors={FIREWORK_COLORS} />
+          <ConfettiBurst count={170} colors={GREEN_PALETTE} />
+        </>
+      ) : null}
 
       <div className="relative mx-auto max-w-2xl">
         <AnimatePresence mode="wait">
@@ -102,7 +127,9 @@ export default function ActTwoFlenn({
                 <span className="h-1.5 w-1.5 rounded-full bg-[#25d366] animate-pulse" />
                 Act Two &middot; Product Launch
               </Badge>
-              <FlennMark className="mt-8 flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
+              <GlowMark color={GREEN_GLOW} size="7rem" className="mt-8">
+                <FlennMark className="flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
+              </GlowMark>
               <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-ink sm:text-6xl lg:text-7xl">
                 {launch.appName}
               </h1>
@@ -124,10 +151,32 @@ export default function ActTwoFlenn({
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col items-center"
             >
-              <FlennMark className="flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
-              <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-ink sm:text-6xl lg:text-7xl">
+              <Starfield count={18} variant="ambient" color="140,245,176" />
+              <GlowMark color={GREEN_GLOW} size="8rem">
+                <FlennMark className="flex h-16 w-16 items-center justify-center rounded-2xl sm:h-20 sm:w-20" />
+              </GlowMark>
+              <motion.h1
+                className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-ink sm:text-6xl lg:text-7xl"
+                style={
+                  prefersReducedMotion
+                    ? { filter: "drop-shadow(0 0 20px rgba(37,211,102,0.4))" }
+                    : undefined
+                }
+                animate={
+                  prefersReducedMotion
+                    ? undefined
+                    : {
+                        filter: [
+                          "drop-shadow(0 0 16px rgba(37,211,102,0.3))",
+                          "drop-shadow(0 0 38px rgba(37,211,102,0.6))",
+                          "drop-shadow(0 0 16px rgba(37,211,102,0.3))",
+                        ],
+                      }
+                }
+                transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+              >
                 {launch.appName} is Now Live 🚀
-              </h1>
+              </motion.h1>
               <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ink-muted sm:text-xl">
                 {flenn?.description}
               </p>
