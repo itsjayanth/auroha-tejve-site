@@ -8,7 +8,7 @@ import Badge from "@/components/ui/badge";
 import LogoMark from "@/components/ui/logo-mark";
 import GradientMesh from "@/components/ui/gradient-mesh";
 import ConfettiBurst from "@/components/ui/confetti-burst";
-import { launch } from "@/lib/data";
+import { launch, siteConfig } from "@/lib/data";
 
 type Phase = "idle" | "celebrating" | "live";
 
@@ -95,11 +95,11 @@ export default function ActOneAuroha({
                 Act One &middot; Inauguration
               </Badge>
               <LogoMark className="mt-8 h-16 w-16 sm:h-20 sm:w-20" />
-              <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-gradient sm:text-6xl lg:text-7xl">
+              <h1 className="mt-8 whitespace-nowrap font-display text-[clamp(0.75rem,4.4vw,4.5rem)] font-medium leading-[1.05] text-gradient">
                 Inaugurating {launch.companyName}
               </h1>
               <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ink-muted sm:text-xl">
-                A new studio, built to ship things worth shipping. Today, we make it official.
+                {siteConfig.tagline}
               </p>
               <div className="mt-10">
                 <Button onClick={goLive}>
@@ -117,7 +117,7 @@ export default function ActOneAuroha({
               className="flex flex-col items-center"
             >
               <LogoMark className="h-16 w-16 sm:h-20 sm:w-20" />
-              <h1 className="mt-8 text-balance font-display text-4xl font-medium leading-[1.05] text-gradient sm:text-6xl lg:text-7xl">
+              <h1 className="mt-8 whitespace-nowrap font-display text-[clamp(0.85rem,4vw,4.5rem)] font-medium leading-[1.05] text-gradient">
                 {launch.companyName} is Live 🎉
               </h1>
               <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-ink-muted sm:text-xl">
